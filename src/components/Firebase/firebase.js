@@ -18,19 +18,15 @@ class Firebase {
   }
 
   // Registration
-  signupUser = (email, password) => {
+  signupUser = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password);
-  };
 
   // Connection
-  loginUser = (email, password) => {
+  loginUser = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
-  };
 
   // Disconnection
-  signoutUser = () => {
-    this.auth.signOut();
-  };
+  signoutUser = () => this.auth.signOut();
 }
 
 export default Firebase;
