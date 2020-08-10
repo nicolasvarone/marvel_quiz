@@ -12,6 +12,8 @@ class Quiz extends Component {
     questions: null,
     options: [],
     idQuestion: 0,
+    btnDisabled: true,
+    userAnswer: null,
   };
 
   loadQuestions = (quizz) => {
@@ -41,12 +43,25 @@ class Quiz extends Component {
     }
   }
 
+  submitAnswer = (selectedAnswer) => {
+    this.setState({
+      userAnswer: selectedAnswer,
+      btnDisabled: false,
+    });
+  };
+
   render() {
-    const { pseudo } = this.props.userData;
+    // const { pseudo } = this.props.userData;
 
     const displayOptions = this.state.options.map((option, index) => {
       return (
-        <p key="index" className="answerOptions">
+        <p
+          key="index"
+          className={`answerOptions ${
+            this.state.userAnswer === option ? "selected" : null
+          }`}
+          onClick={() => this.submitAnswer(option)}
+        >
           {option}
         </p>
       );
@@ -58,7 +73,9 @@ class Quiz extends Component {
         <ProgressBar />
         <h2>{this.state.question}</h2>
         {displayOptions}
-        <button className="btnSubmit">Suivant</button>
+        <button disabled={this.state.btnDisabled} className="btnSubmit">
+          Suivant
+        </button>
       </div>
     );
   }
