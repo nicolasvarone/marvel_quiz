@@ -24,7 +24,6 @@ const Login = (props) => {
     firebase
       .loginUser(email, password)
       .then((user) => {
-        console.log(user);
         setEmail("");
         setPassword("");
         props.history.push("/welcome");
@@ -78,6 +77,10 @@ const Login = (props) => {
             <div className="linkContainer">
               <Link className="simpleLink" to="/signup">
                 Nouveau sur Marvel Quiz? Inscrivez-vous maintenant.
+              </Link>
+              <br />
+              <Link className="simpleLink" to="/forgetpassword">
+                Mot de passe oublié? Récupérez-le ici.
               </Link>
             </div>
           </div>

@@ -5,6 +5,7 @@ import Welcome from "../Welcome";
 import Landing from "../Landing";
 import Login from "../Login";
 import Signup from "../Signup";
+import ForgetPassword from "../ForgetPassword";
 import ErrorPage from "../ErrorPage";
 import Footer from "../Footer";
 import "../../App.css";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/welcome" component={Welcome} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/forgetpassword" component={ForgetPassword} />
         <Route component={ErrorPage} />
       </Switch>
 
