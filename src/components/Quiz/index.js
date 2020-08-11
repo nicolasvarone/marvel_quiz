@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 import { QuizMarvel } from "../QuizMarvel";
 import Levels from "../Levels";
 import ProgressBar from "../ProgressBar";
+
+toast.configure();
 
 class Quiz extends Component {
   state = {
@@ -14,11 +18,16 @@ class Quiz extends Component {
     idQuestion: 0,
     btnDisabled: true,
     userAnswer: null,
+    score: 0,
+    showWelcomeMsg: false,
   };
+
+  storeDataRef = React.createRef();
 
   loadQuestions = (quizz) => {
     const fetchedArrayQuiz = QuizMarvel[0].quizz[quizz];
     if (fetchedArrayQuiz.length >= this.state.maxQuestions) {
+      this.storeDataRef.current = fetchedArrayQuiz;
       const newArray = fetchedArrayQuiz.map(
         ({ answer, ...keepRest }) => keepRest
       );
@@ -30,9 +39,61 @@ class Quiz extends Component {
     }
   };
 
+  showWelcomeMsg = (pseudo) => {
+    if (!this.state.showWelcomeMsg) {
+      this.setState({
+        showWelcomeMsg: true,
+      });
+
+      toast.warn(`Bienvenue ${pseudo}! Et bonne chance!`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+      });
+    }
+  };
+
   componentDidMount() {
     this.loadQuestions(this.state.levelNames[this.state.quizlevel]);
   }
+
+  nextQuestion = () => {
+    if (this.state.idQuestion === this.state.maxQuestions - 1) {
+      // End
+    } else {
+      this.setState((prevState) => ({
+        idQuestion: prevState.idQuestion + 1,
+      }));
+    }
+
+    const goodAnswer = this.storeDataRef.current[this.state.idQuestion].answer;
+    if (this.state.userAnswer === goodAnswer) {
+      this.setState((prevState) => ({
+        score: prevState.score + 1,
+      }));
+
+      toast.success("Bravo! +1", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      toast.error("Raté! 0", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.storedQuestions !== prevState.storedQuestions) {
@@ -40,6 +101,19 @@ class Quiz extends Component {
         question: this.state.storedQuestions[this.state.idQuestion].question,
         options: this.state.storedQuestions[this.state.idQuestion].options,
       });
+    }
+
+    if (this.state.idQuestion !== prevState.idQuestion) {
+      this.setState({
+        question: this.state.storedQuestions[this.state.idQuestion].question,
+        options: this.state.storedQuestions[this.state.idQuestion].options,
+        userAnswer: null,
+        btnDisabled: true,
+      });
+    }
+
+    if (this.props.userData.pseudo) {
+      this.showWelcomeMsg(this.props.userData.pseudo);
     }
   }
 
@@ -73,7 +147,11 @@ class Quiz extends Component {
         <ProgressBar />
         <h2>{this.state.question}</h2>
         {displayOptions}
-        <button disabled={this.state.btnDisabled} className="btnSubmit">
+        <button
+          disabled={this.state.btnDisabled}
+          className="btnSubmit"
+          onClick={this.nextQuestion}
+        >
           Suivant
         </button>
       </div>
