@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Stepper from "react-stepper-horizontal";
 
-const Levels = () => {
+const Levels = ({ levelNames, quizLevel }) => {
+  const [levels, setLevels] = useState([]);
+
+  useEffect(() => {
+    const quizSteps = levelNames.map((level) => ({
+      title: level.toUpperCase(),
+    }));
+    setLevels(quizSteps);
+  }, [levelNames]);
+
   return (
-    <div className="levelsContainer">
-      <h2 className="headingLevels">Débutant</h2>
+    <div className="levelsContainer" style={{ backgroundColor: "transparent" }}>
+      <Stepper
+        steps={levels}
+        activeStep={1} // quizLevel //
+        circleTop={0}
+        activeTitleColor={"#d31017"}
+        activeColor={"#d31017"}
+        completeTitleColor={"#e0e0e0"}
+        completeColor={"#e0e0e0"}
+        completeBarColor={"#e0e0e0"}
+        barStyle={"dashed"}
+      />
     </div>
   );
 };
 
-export default Levels;
+export default React.memo(Levels);
