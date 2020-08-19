@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <p>Projet réalisé par Nicolas Varone</p>
+        <p>Project realized by Nicolas Varone and inspired by Donkey Geek</p>
         <p>
-          Les icônes Wolverine, Iron Man, Spider-Man et Batman sont tirées de
+          The Wolverine, Iron Man, Spider-Man and Batman icons are taken from
           iconfinder.com
         </p>
       </div>

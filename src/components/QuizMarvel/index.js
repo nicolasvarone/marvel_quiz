@@ -3,10 +3,10 @@ export const QuizMarvel = [
     fournisseur: "Donkey Geek (https://www.youtube.com/c/DonkeyGeek)",
     sujet: "Application Marvel Quiz pour apprentissage React JS",
     quizz: {
-      debutant: [
+      beginner: [
         {
           id: 0,
-          question: "De quelle équipe fait partie Iceman?",
+          question: "What team is Iceman on?",
           options: [
             "The X-Men",
             "The Fantastic Four",
@@ -18,8 +18,7 @@ export const QuizMarvel = [
         },
         {
           id: 1,
-          question:
-            "Dans les X-Men, quelle substance constitue le squelette de Wolverine ?",
+          question: "In X-Men, what substance forms the Wolverine skeleton?",
           options: ["Cavorite", "Vibranium", "Adamantium", "Neutronium"],
           answer: "Adamantium",
           heroId: 1009718,
@@ -27,7 +26,7 @@ export const QuizMarvel = [
         {
           id: 2,
           question:
-            "Quel est le nom de Spider-Man, apparu pour la première fois en 1962 ?",
+            "What is the name of Spider-Man, who first appeared in 1962?",
           options: ["Tom Parker", "John Parker", "Peter Parker", "Alan Parker"],
           answer: "Peter Parker",
           heroId: 1009610,
@@ -35,7 +34,7 @@ export const QuizMarvel = [
         {
           id: 3,
           question:
-            "Comment s'appelait Wolverine quand il était cavalier d'Apocalypse?",
+            "What was Wolverine's name when he was a knight of the Apocalypse?",
           options: ["Rage", "Death", "Destruction", "Oblivion"],
           answer: "Death",
           heroId: 1009718,
@@ -43,28 +42,28 @@ export const QuizMarvel = [
         {
           id: 4,
           question:
-            "Quel super-héros ne se sépare jamais de son marteau forgé par les nains ?",
+            "What superhero never separates from his hammer forged by dwarves?",
           options: ["Bizarro", "Flash", "Venom", "Thor"],
           answer: "Thor",
           heroId: 1009664,
         },
         {
           id: 5,
-          question: "Quelle couleur est associée à Hulk ?",
-          options: ["Le jaune", "Le rouge", "Le vert", "Le bleu"],
-          answer: "Le vert",
+          question: "What color is associated with Hulk?",
+          options: ["Yellow", "Red", "Green", "Blue"],
+          answer: "Green",
           heroId: 1009351,
         },
         {
           id: 6,
-          question: "Quel super-héros ressemble à un être de pierre ?",
+          question: "What superhero looks like a creature of stone?",
           options: ["Plastic Man", "The Thing", "Hawkman", "Superboy"],
           answer: "The Thing",
           heroId: 1009662,
         },
         {
           id: 7,
-          question: "De qui Edwin Jarvis est-il le majordome?",
+          question: "Whose butler is Edwin Jarvis?",
           options: [
             "Bruce Wayne",
             "Charles Xavier",
@@ -77,7 +76,7 @@ export const QuizMarvel = [
         {
           id: 8,
           question:
-            "Quel super-héros porte un costume inspiré du drapeau américain ?",
+            "What superhero wears a costume inspired by the American flag?",
           options: ["Tigra", "Blade", "Iron Man", "Captain America"],
           answer: "Captain America",
           heroId: 1009220,
@@ -85,32 +84,30 @@ export const QuizMarvel = [
         {
           id: 9,
           question:
-            "Y compris ses pouces, combien de doigts sur les deux mains possède The Thing?",
+            "Including his thumbs, how many fingers on both hands does The Thing have?",
           options: [8, 6, 10, 4],
           answer: 8,
           heroId: 1009662,
         },
       ],
-      confirme: [
+      confirmed: [
         {
           id: 0,
-          question:
-            "Qui est Logan dans la bande dessinée de Marvel Comics 'X-Men' ?",
+          question: "Who is Logan in the Marvel Comics 'X-Men' comic book?",
           options: ["Cyclope", "Colossus", "Wolverine", "Caliban"],
           answer: "Wolverine",
           heroId: 1009718,
         },
         {
           id: 1,
-          question: "Quel super héros est intéressé par Sue Storm?",
+          question: "What superhero is interested in Sue Storm?",
           options: ["X-Men", "Illuminati", "Spider-Man", "Namor"],
           answer: "Namor",
           heroId: 1009466,
         },
         {
           id: 2,
-          question:
-            "Quel humain devient surpuissant grâce à une armure de haute technologie ?",
+          question: "What human becomes superpowered by high-tech armor?",
           options: ["Cyclope", "Iron Man", "Wolverine", "Thor"],
           answer: "Iron Man",
           heroId: 1009368,
@@ -118,66 +115,60 @@ export const QuizMarvel = [
         {
           id: 3,
           question:
-            "Laquelle de ces propositions désigne un ennemi emblématique de Spider-Man ?",
+            "Which one of the proposals refers to an emblematic enemy of Spider-Man?",
           options: ["Lizard", "Thanos", "Void", "Green Goblin"],
           answer: "Green Goblin",
           heroId: 1014985,
         },
         {
           id: 4,
-          question: "GHOST RIDER est connu comme étant",
+          question: "GHOST RIDER is known as...",
           options: [
-            "Le diable motard",
-            "L'esprit de la haine",
-            "L'esprit de vengeance",
-            "Le crâne rouge",
+            "The biker devil",
+            "The spirit of hate",
+            "The spirit of vengeance",
+            "The red skull",
           ],
-          answer: "L'esprit de vengeance",
+          answer: "The spirit of vengeance",
           heroId: 1009318,
         },
         {
           id: 5,
-          question: "Avant de devenir Radioactive Man, Chen Lu était ..",
-          options: [
-            "Un espion",
-            "Un physicien nucléaire",
-            "Un soldat",
-            "Un pilote",
-          ],
-          answer: "Un physicien nucléaire",
+          question: "Before becoming Radioactive Man, Chen Lu was...",
+          options: ["A spy", "A nuclear physicist", "A soldier", "A pilot"],
+          answer: "A nuclear physicist",
           heroId: 1009526,
         },
         {
           id: 6,
           question:
-            "Quel super-héros ayant perdu la vue possède des organes sensoriels développés ?",
+            "What superhero with blindness has developed sensory organs?",
           options: ["Daredevil", "Flash", "Superman", "Captain America"],
           answer: "Daredevil",
           heroId: 1009262,
         },
         {
           id: 7,
-          question:
-            "Avant de se tourner vers une vie de crime, Mysterio était...",
+          question: "Before he turned to a life of crime, Mysterio was...",
           options: [
-            "Cascadeur",
-            "Artiste d'effets spéciaux",
-            "Magicien",
-            "Sapeur pompier",
+            "Stuntman",
+            "Special effects artist",
+            "Magician",
+            "Fireman",
           ],
-          answer: "Artiste d'effets spéciaux",
+          answer: "Special effects artist",
           heroId: 1010952,
         },
         {
           id: 8,
-          question: "Fin Fang Foom est un alien de ..",
+          question: "Fin Fang Foom is an alien from...",
           options: ["Krypton", "Maklu IV", "Mars", "Vulcan"],
           answer: "Maklu IV",
           heroId: 1009303,
         },
         {
           id: 9,
-          question: "DOCTOR DOOM a fréquenté le même collège que...",
+          question: "DOCTOR DOOM studied at the same college as...",
           options: [
             "Tony Stark",
             "Peter Parker",
@@ -192,20 +183,20 @@ export const QuizMarvel = [
         {
           id: 0,
           question:
-            "Quand elle a travaillé pour Hydra, la première mission de Spider-Woman était de...",
+            "When she worked for Hydra, Spider-Woman's first mission was to...",
           options: [
-            "Séduire Iron-Man",
-            "Séduire Spider-Man",
-            "Tuer The Black Widow",
-            "Tuer Nick Fury",
+            "Seduce Iron-Man",
+            "Seduce Spider-Man",
+            "Kill The Black Widow",
+            "Kill Nick Fury",
           ],
-          answer: "Tuer Nick Fury",
+          answer: "Kill Nick Fury",
           heroId: 1009608,
         },
         {
           id: 1,
           question:
-            "Quel super-héros créé par Marvel Comics est aveugle de naissance ?",
+            "Which superhero created by Marvel Comics is blind from birth?",
           options: ["Flash", "Thor", "Cyclope", "Stick"],
           answer: "Stick",
           heroId: 1009626,
@@ -213,7 +204,7 @@ export const QuizMarvel = [
         {
           id: 2,
           question:
-            "Spider-Man a été sollicité pour créer la Spider-Mobile par la société de publicité de ...",
+            "Spider-Man was asked to create the Spider-Mobile by the advertising company of...",
           options: [
             "Carter Lombardo",
             "Max Shrek",
@@ -225,8 +216,7 @@ export const QuizMarvel = [
         },
         {
           id: 3,
-          question:
-            "Quelle héroïne de Daredevil est une tueuse professionnelle ?",
+          question: "What Daredevil heroine is a professional killer?",
           options: ["Ultron", "Catwoman", "Elektra", "Wonder Woman"],
           answer: "Elektra",
           heroId: 1009288,
@@ -234,7 +224,7 @@ export const QuizMarvel = [
         {
           id: 4,
           question:
-            "Où réside Mandarin devenu récemment le patron du Sin-Cong Wong Chu?",
+            "Where lives Mandarin who recently became the boss of Sin-Cong Wong Chu?",
           options: [
             "The Valley of Spirits",
             "The Mountains of Asgard",
@@ -246,44 +236,42 @@ export const QuizMarvel = [
         },
         {
           id: 5,
-          question:
-            "Quel super-héros possède les mêmes pouvoirs que Spider-Man ?",
+          question: "What superhero has the same powers as Spider-Man?",
           options: ["Venom", "Green Arrow", "Blade", "Bizarro"],
           answer: "Venom",
           heroId: 1010788,
         },
         {
           id: 6,
-          question: "Nick Fury a un frère devenu méchant. Quel est son nom?",
+          question: "Nick Fury has a brother who's gone evil. What's his name?",
           options: ["Venom", "Viper", "The Red Skull", "Scorpio"],
           answer: "Scorpio",
           heroId: 1011007,
         },
         {
           id: 7,
-          question: "Miss Marvel n'a jamais été connue sous le nom de:",
+          question: "Miss Marvel has never been known as...",
           options: ["Captain Marvel", "Rogue", "Warbird", "Binary"],
           answer: "Rogue",
           heroId: 1010338,
         },
         {
           id: 8,
-          question:
-            "Quelle est l'héroïne proche du Docteur Strange créée en 1964 ?",
+          question: "Who is Dr. Strange's close heroine created in 1964?",
           options: ["Felina", "Clea", "Monica", "Elsa"],
           answer: "Clea",
           heroId: 1009239,
         },
         {
           id: 9,
-          question: "Étant enfant, Storm a tenté de ...",
+          question: "As a child, Storm tried to...",
           options: [
-            "Incendier un village avec un coup de foudre",
-            "Devenir le chef d'un gang",
-            "Voler la voiture du professeur Xavier",
-            "Faire les poches du professeur Xavier",
+            "Burning down a village with a thunderbolt",
+            "Becoming the leader of a gang",
+            "Steal Professor Xavier's car",
+            "Picking Professor Xavier's pockets",
           ],
-          answer: "Faire les poches du professeur Xavier",
+          answer: "Picking Professor Xavier's pockets",
           heroId: 1009629,
         },
       ],

@@ -47,9 +47,9 @@ const Signup = (props) => {
     email === "" ||
     password === "" ||
     password !== confirmPassword ? (
-      <button disabled>Inscription</button>
+      <button disabled>Sign in</button>
     ) : (
-      <button>Inscription</button>
+      <button>Sign in</button>
     );
 
   // Errors management
@@ -63,7 +63,7 @@ const Signup = (props) => {
           <div className="formContent">
             {errorMsg}
 
-            <h2>Inscription</h2>
+            <h2>Sign in</h2>
             <form onSubmit={handleSubmit}>
               <div className="inputBox">
                 <input
@@ -98,7 +98,7 @@ const Signup = (props) => {
                   autoComplete="off"
                   required
                 />
-                <label htmlFor="password">Mot de passe</label>
+                <label htmlFor="password">Password</label>
               </div>
 
               <div className="inputBox">
@@ -110,9 +110,7 @@ const Signup = (props) => {
                   autoComplete="off"
                   required
                 />
-                <label htmlFor="confirmPassword">
-                  Confirmer le mot de passe
-                </label>
+                <label htmlFor="confirmPassword">Confirm password</label>
 
                 {btn}
               </div>
@@ -120,7 +118,7 @@ const Signup = (props) => {
 
             <div className="linkContainer">
               <Link className="simpleLink" to="/login">
-                Déjà inscrit? Connectez-vous.
+                Already have an account? Log in!
               </Link>
             </div>
           </div>

@@ -34,12 +34,12 @@ const Landing = () => {
     <Fragment>
       <div onMouseOver={setLeftImg} onMouseOut={clearImg} className="leftBox">
         <Link className="btn-welcome" to="/signup">
-          Inscription
+          Sign up
         </Link>
       </div>
       <div onMouseOver={setRightImg} onMouseOut={clearImg} className="rightBox">
         <Link className="btn-welcome" to="/login">
-          Connexion
+          Log in
         </Link>
       </div>
     </Fragment>

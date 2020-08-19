@@ -24,7 +24,7 @@ const initialState = {
   percent: null,
 };
 
-const levelNames = ["debutant", "confirme", "expert"];
+const levelNames = ["beginner", "confirmed", "expert"];
 
 class Quiz extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class Quiz extends Component {
         showWelcomeMsg: true,
       });
 
-      toast.warn(`Bienvenue ${pseudo}! Et bonne chance!`, {
+      toast.warn(`Welcome ${pseudo}! And good luck!`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -85,7 +85,7 @@ class Quiz extends Component {
         score: prevState.score + 1,
       }));
 
-      toast.success("Bravo! +1", {
+      toast.success("Congratulations! +1", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -94,7 +94,7 @@ class Quiz extends Component {
         draggable: true,
       });
     } else {
-      toast.error("Raté! 0", {
+      toast.error("Missed! 0", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -219,7 +219,7 @@ class Quiz extends Component {
           className="btnSubmit"
           onClick={this.nextQuestion}
         >
-          {idQuestion > maxQuestions - 1 ? "Suivant" : "Terminé"}
+          {idQuestion > maxQuestions - 1 ? "Next" : "Submit"}
         </button>
       </Fragment>
     );

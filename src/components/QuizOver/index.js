@@ -90,46 +90,48 @@ const QuizOver = React.forwardRef((props, ref) => {
         <div className="stepsBtnContainer">
           {quizLevel < levelNames.length ? (
             <Fragment>
-              <p className="successMsg">Bravo! Passez au niveau suivant!</p>
+              <p className="successMsg">
+                Congratulations! Go to the next level!
+              </p>
               <button
                 className="btnResult success"
                 onClick={() => loadLevelQuestions(quizLevel)}
               >
-                Niveau suivant
+                Next level
               </button>
             </Fragment>
           ) : (
             <Fragment>
               <p className="successMsg">
                 <GiTrophyCup size="50px" />
-                Bravo! Vous êtes un expert!
+                Congratulations! You are an expert!
               </p>
               <button
                 className="btnResult gameOver"
                 onClick={() => loadLevelQuestions(0)}
               >
-                Accueil
+                Home
               </button>
             </Fragment>
           )}
         </div>
         <div className="percentage">
-          <div className="progressPercent">Réussite: {percent}%</div>
+          <div className="progressPercent">Complete success: {percent}%</div>
           <div className="progressPercent">
-            Note {score}/{maxQuestions}
+            Score: {score}/{maxQuestions}
           </div>
         </div>
       </Fragment>
     ) : (
       <Fragment>
         <div className="stepsBtnContainer">
-          <p className="failureMsg">Vous avez échoué!</p>
+          <p className="failureMsg">You failed!</p>
         </div>
 
         <div className="percentage">
-          <div className="progressPercent">Réussite: {percent}</div>
+          <div className="progressPercent">Complete success: {percent}</div>
           <div className="progressPercent">
-            Note {score}/{maxQuestions}
+            Score: {score}/{maxQuestions}
           </div>
         </div>
       </Fragment>
@@ -147,7 +149,7 @@ const QuizOver = React.forwardRef((props, ref) => {
                 className="btnInfo"
                 onClick={() => showModal(question.heroId)}
               >
-                Infos
+                Info
               </button>
             </td>
           </tr>
@@ -182,13 +184,13 @@ const QuizOver = React.forwardRef((props, ref) => {
           <p>{characterInfos.attributionText}</p>
         </div>
         <div className="comicDetails">
-          <h3>Description</h3>
+          <h3>Details</h3>
           {characterInfos.data.results[0].description ? (
             <p>{characterInfos.data.results[0].description}</p>
           ) : (
-            <p>Descritpion indisponible...</p>
+            <p>Details not available...</p>
           )}
-          <h3>Plus d'infos</h3>
+          <h3>More info</h3>
           {characterInfos.data.results[0].urls &&
             characterInfos.data.results[0].urls.map((url, index) => {
               return (
@@ -206,14 +208,14 @@ const QuizOver = React.forwardRef((props, ref) => {
       </div>
       <div className="modalFooter">
         <button className="modalBtn" onClick={hideModal}>
-          Fermer
+          Close
         </button>
       </div>
     </Fragment>
   ) : (
     <Fragment>
       <div className="modalHeader">
-        <h2>Réponse de Marvel...</h2>
+        <h2>Marvel's answer...</h2>
       </div>
       <div className="modalBody">
         <Loader />
@@ -226,15 +228,15 @@ const QuizOver = React.forwardRef((props, ref) => {
       {decision}
 
       <hr />
-      <p>Les réponses aux questions:</p>
+      <p>Answers to the questions:</p>
 
       <div className="answerContainer">
         <table className="answers">
           <thead>
             <tr>
               <th>Question</th>
-              <th>Réponse</th>
-              <th>Infos</th>
+              <th>Answer</th>
+              <th>Info</th>
             </tr>
           </thead>
           <tbody>{questionAnswer}</tbody>

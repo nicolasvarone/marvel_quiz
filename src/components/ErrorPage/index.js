@@ -15,7 +15,7 @@ const ErrorPage = () => {
   return (
     <div className="quiz-bg">
       <div className="container">
-        <h2 style={centerH2}>Oups, cette page n'existe pas!</h2>
+        <h2 style={centerH2}>Oups, this page does not exist!</h2>
         <img style={centerImg} src={batman} alt="error page" />
       </div>
     </div>

@@ -52,7 +52,7 @@ const ForgetPassword = (props) => {
 
             {error && <span>{error.message}</span>}
 
-            <h2>Mot de passe oublié?</h2>
+            <h2>Forgot password?</h2>
             <form onSubmit={handleSubmit}>
               <div className="inputBox">
                 <input
@@ -65,12 +65,12 @@ const ForgetPassword = (props) => {
                 <label htmlFor="email">Email</label>
               </div>
 
-              <button disabled={disabled}>Récupérer</button>
+              <button disabled={disabled}>Reset password</button>
             </form>
 
             <div className="linkContainer">
               <Link className="simpleLink" to="/login">
-                Déjà inscrit? Connectez-vous.
+                Already have an account? Log in!
               </Link>
             </div>
           </div>

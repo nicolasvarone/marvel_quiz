@@ -22,7 +22,7 @@ const Logout = () => {
     <div className="logoutContainer">
       <label className="switch">
         <input onChange={handleChange} type="checkbox" checked={checked} />
-        <span className="slider round" data-tip="Déconnexion"></span>
+        <span className="slider round" data-tip="Log out"></span>
       </label>
       <ReactTooltip place="left" effect="solid" />
     </div>

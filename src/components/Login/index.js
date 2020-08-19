@@ -43,7 +43,7 @@ const Login = (props) => {
           <div className="formContent">
             {error !== "" && <span>{error.message}</span>}
 
-            <h2>Connexion</h2>
+            <h2>Log in</h2>
             <form onSubmit={handleSubmit}>
               <div className="inputBox">
                 <input
@@ -64,23 +64,19 @@ const Login = (props) => {
                   autoComplete="off"
                   required
                 />
-                <label htmlFor="password">Mot de passe</label>
+                <label htmlFor="password">Password</label>
               </div>
 
-              {btn ? (
-                <button>Connexion</button>
-              ) : (
-                <button disabled>Connexion</button>
-              )}
+              {btn ? <button>Log in</button> : <button disabled>Log in</button>}
             </form>
 
             <div className="linkContainer">
               <Link className="simpleLink" to="/signup">
-                Nouveau sur Marvel Quiz? Inscrivez-vous maintenant.
+                New to Marvel Quiz? Sign up now!
               </Link>
               <br />
               <Link className="simpleLink" to="/forgetpassword">
-                Mot de passe oublié? Récupérez-le ici.
+                Forgot your password? Reset hier!
               </Link>
             </div>
           </div>
