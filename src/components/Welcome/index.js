@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { FirebaseContext } from "../Firebase";
 import Logout from "../Logout";
 import Quiz from "../Quiz";
